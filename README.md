@@ -1,10 +1,10 @@
 # EvoloPy-FS: An Open-Source Nature-Inspired Optimization Framework in Python for Feature Selection
 
-The EvoloPy toolbox provides classical and recent nature-inspired metaheuristic for the global optimization. The list of optimizers that have been implemented includes Particle Swarm Optimization (PSO), Multi-Verse Optimizer (MVO), Grey Wolf Optimizer (GWO), and Moth Flame Optimization (MFO). The full list of implemented optimizers is available here https://github.com/7ossam81/EvoloPy/wiki/List-of-optimizers
+The EvoloPy toolbox provides classical and recent nature-inspired metaheuristic for feature selection. The list of optimizers that have been implemented includes Particle Swarm Optimization (PSO), Multi-Verse Optimizer (MVO), Grey Wolf Optimizer (GWO), and Moth Flame Optimization (MFO), Firefly Optmizization, Whale Optimization Algorithm, Bat-inspired algorithm, and Cuckoo search. The full list of implemented optimizers is available here https://github.com/7ossam81/EvoloPy/wiki/List-of-optimizers
 
 
 ## Features
-- Six nature-inspired metaheuristic optimizers were implemented.
+- Eight nature-inspired metaheuristic optimizers were implemented.
 - The implimentation uses the fast array manipulation using `NumPy`.
 - Matrix support using `SciPy`'s package.
 - More optimizers is comming soon.
@@ -21,7 +21,7 @@ Run
 That command above will install  `sklearn`, `NumPy`, and `SciPy` for
 you.
 
-- If you are installing EvoloPy Toolbox onto Windows, please Install Anaconda from here https://www.continuum.io/downloads, which is the leading open data science platform powered by Python.
+- If you are installing EvoloPy-FS Toolbox onto Windows, please Install Anaconda from here https://www.continuum.io/downloads, which is the leading open data science platform powered by Python.
 - If you are installing onto Ubuntu or Debian and using Python 3 then
   this will pull in all the dependencies from the repositories:
   
@@ -36,8 +36,8 @@ Clone the Git repository from GitHub
 
 ## Quick User Guide
 
-EvoloPy toolbox contains twenty three benchamrks (F1-F23). The main file is the optimizer.py, which considered the interface of the toolbox. In the optimizer.py you can setup your experiment by selecting the optmizers, the benchmarks, number of runs, number of iterations, and population size. 
-The following is a sample example to use the EvoloPy toolbox.  
+EvoloPy-FS toolbox contains sammple dataset (Breast cancer data). The main file is the optimizer.py, which considered the interface of the toolbox. In the optimizer.py you can setup your experiment by selecting the optmizers, the datasets, number of runs, number of iterations, and population size. 
+The following is a sample example to use the EvoloPy-FS toolbox.  
 To choose PSO optimizer for your experiment, change the PSO flag to true and others to false.  
 ```
 Select optimizers:    
