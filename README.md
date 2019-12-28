@@ -1,5 +1,7 @@
 ### EvoloPy-FS: An Open-Source Nature-Inspired Optimization Framework in Python for Feature Selection
 
+### V1.0 Beta Version ###
+
 EvoloPy-FS is python open-source optimization framework that includes several well-regarded swarm intelligence (SI) algorithms. It is geared toward feature selection optimization problems. It is an easy to use, reusable, and adaptable framework. The objective of developing EvoloPy-FS is providing a feature selection engine to help researchers even those with less knowledge in SI in solving their problems and visualizing rapidresults with a less programming effort. That is why the orientation of this work wasto build an open-source, white-box framework, where algorithms and data structures are being explicit, transparent, and publicly available. EvoloPy-FS comes to continueour path for building an integrated optimization environment, which was started bythe original EvoloPy for global optimization problems, then EvoloPy-NN for training multilayer perception neural network, and finally the new EvoloPy-FS for features election optimization. EvoloPy-FS is freely hosted on (www.evo-ml.com) with ahelpful documentation. 
 
 
