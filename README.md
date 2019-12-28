@@ -1,4 +1,4 @@
-###EvoloPy-FS: An Open-SourceNature-Inspired OptimizationFramework in Python for FeatureSelection
+### EvoloPy-FS: An Open-SourceNature-Inspired OptimizationFramework in Python for FeatureSelection
 
 EvoloPy-FS is python open-source optimization framework that includes several well-regarded swarm intelligence (SI) algorithms. It is geared toward feature selection optimization problems. It is an easy to use, reusable, and adaptable framework. The objective of developing EvoloPy-FS is providing a feature selection engine to help researchers even those with less knowledge in SI in solving their problems and visualizing rapidresults with a less programming effort. That is why the orientation of this work wasto build an open-source, white-box framework, where algorithms and data structures are being explicit, transparent, and publicly available. EvoloPy-FS comes to continueour path for building an integrated optimization environment, which was started bythe original EvoloPy for global optimization problems, then EvoloPy-NN for training multilayer perception neural network, and finally the new EvoloPy-FS for features election optimization. EvoloPy-FS is freely hosted on (www.evo-ml.com) with ahelpful documentation. 
 
@@ -6,14 +6,14 @@ EvoloPy-FS is python open-source optimization framework that includes several we
 The full list of implemented optimizers is available here https://github.com/7ossam81/EvoloPy/wiki/List-of-optimizers
 
 
-##Features
+## Features
 - Six nature-inspired metaheuristic optimizers are implemented.
 - The implimentation uses the fast array manipulation using [`NumPy`] (http://www.numpy.org/).
 - Matrix support using [`SciPy`'s] (https://www.scipy.org/) package.
 - More optimizers are comming soon.
  
 
-##Installation
+## Installation
 - Python 3.xx is required.
 
 Run
@@ -31,14 +31,14 @@ you.
   
       sudo apt-get install python3-numpy python3-scipy liblapack-dev libatlas-base-dev libgsl0-dev fftw-dev libglpk-dev libdsdp-dev
 
-##Get the source
+## Get the source
 
 Clone the Git repository from GitHub
 
     git clone https://github.com/aljarrahcs/EvoloPy-FS.git
 
 
-##Quick User Guide
+## Quick User Guide
 EvoloPy-FS Framework contains six datasets (All of them are obtainied from UCI repository). 
 The main file is the main.py, which considered the interface of the framewok. In the main.py you 
 can setup your experiment by selecting the optmizers, the datasets, number of runs, number of iterations, number of neurons
@@ -98,15 +98,15 @@ The results file contains the following measures:
     Iter1	Iter2 Iter3... : Convergence values (The number of features after every iteration).	
     
 
-##Contribute
+## Contribute
 - Issue Tracker: https://github.com/aljarrahcs/EvoloPy-FS/issues  
 - Source Code: https://github.com/aljarrahcs/EvoloPy-FS
 
-##Support
+## Support
 
 Use the [issue tracker](https://github.com/aljarrahcs/EvoloPy-FS/issues). 
 
-##Citation Request:
+## Citation Request:
 
 Please include these citations if you plan to use this Framework:
 
