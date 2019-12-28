@@ -1,18 +1,16 @@
-###EvoloPy-NN: An open source nature-inspired optimization Framework for Training Multilayer Perceptron Neural Network in Python
+###EvoloPy-FS: An Open-SourceNature-Inspired OptimizationFramework in Python for FeatureSelection
 
-The EvoloPy-NN framework provides classical and recent nature-inspired metaheuristic for training a single layer Multilayer Perceptron Neural Network. The list of optimizers that have been implemented includes Particle Swarm Optimization (PSO), Multi-Verse Optimizer (MVO), Grey Wolf Optimizer (GWO), and Moth Flame Optimization (MFO). The full list of implemented optimizers is available here https://github.com/7ossam81/EvoloPy/wiki/List-of-optimizers
+EvoloPy-FS is python open-source optimization framework that includes several well-regarded swarm intelligence (SI) algorithms. It is geared toward feature selection optimization problems. It is an easy to use, reusable, and adaptable framework. The objective of developing EvoloPy-FS is providing a feature selection engine to help researchers even those with less knowledge in SI in solving their problems and visualizing rapidresults with a less programming effort. That is why the orientation of this work wasto build an open-source, white-box framework, where algorithms and data structures are being explicit, transparent, and publicly available. EvoloPy-FS comes to continueour path for building an integrated optimization environment, which was started bythe original EvoloPy for global optimization problems, then EvoloPy-NN for training multilayer perception neural network, and finally the new EvoloPy-FS for features election optimization. EvoloPy-FS is freely hosted on (www.evo-ml.com) with ahelpful documentation. 
 
 
+The full list of implemented optimizers is available here https://github.com/7ossam81/EvoloPy/wiki/List-of-optimizers
 
-<div style="text-align:center"><img  src="https://cloud.githubusercontent.com/assets/17023748/21052168/d61dd09e-be23-11e6-9c59-58f000bff11e.jpg"  height="40%" width="40%"></div>
 
 ##Features
 - Six nature-inspired metaheuristic optimizers are implemented.
 - The implimentation uses the fast array manipulation using [`NumPy`] (http://www.numpy.org/).
 - Matrix support using [`SciPy`'s] (https://www.scipy.org/) package.
 - More optimizers are comming soon.
-- Only binary classification problems are supported so far.
-- The implimentation uses the powerful Neural Network Library [`neurolab`] (https://pythonhosted.org/neurolab/). 
  
 
 ##Installation
@@ -27,7 +25,7 @@ Run
 That command above will install  `sklearn`, `NumPy` and `SciPy` for
 you.
 
-- If you are installing EvoloPy-NN onto Windows, please Install Anaconda from here https://www.continuum.io/downloads, which is the leading open data science platform powered by Python.
+- If you are installing EvoloPy-FS onto Windows, please Install Anaconda from here https://www.continuum.io/downloads, which is the leading open data science platform powered by Python.
 - If you are installing onto Ubuntu or Debian and using Python 3 then
   this will pull in all the dependencies from the repositories:
   
@@ -37,11 +35,11 @@ you.
 
 Clone the Git repository from GitHub
 
-    git clone https://github.com/7ossam81/EvoloPy-NN.git
+    git clone https://github.com/aljarrahcs/EvoloPy-FS.git
 
 
 ##Quick User Guide
-EvoloPy-NN Framework contains six datasets (All of them are obtainied from UCI repository). 
+EvoloPy-FS Framework contains six datasets (All of them are obtainied from UCI repository). 
 The main file is the main.py, which considered the interface of the framewok. In the main.py you 
 can setup your experiment by selecting the optmizers, the datasets, number of runs, number of iterations, number of neurons
 and population size. The following is a sample example to use the EvoloPy-NN framework.
@@ -52,36 +50,24 @@ PSO= True
 MVO= False  
 GWO = False  
 MFO= False  
-CS= False  
+.....
+
 
 After that, Select datasets:
 
-datasets=["BreastCancer", "Diabetes", "Liver", "Parkinsons", "Vertebral"]
+datasets=["BreastCancer", "iris"]
 
-The folder datasets in the repositoriy contains 6 binary datasets (All of them are obtained from UCI repository).
+The folder datasets in the repositoriy contains 3 binary datasets (All of them are obtained from UCI repository).
 
 To add new dataset:
 - Put your dataset in a csv format (No header is required)
-- Normalize/Scale you dataset ([0,1] scaling is prefered).
-- Split the dataset into 66% training, and 34% testing.
-- Rename the training and testing sets based on the following pattern such as:
-   
-     [Dataset Name]Train.csv
-     
-     [Dataset Name]Test.csv
-     % replace the [Dataset Name] part by the actual name of the dataset.
-    
-  Example: If the datset name is Seed, the two files will be like the following:
-    
-      SeedTrain.csv
-      SeedTest.csv
-  
+- Normalize/Scale you dataset ([0,1] scaling is prefered) #(Optional)
 - Place the new datset files in the datasets folder.
 - Add the dataset to the datasets list in the main.py (Line 18).
   
   For example, if the dastaset name is Seed, the new line  will be like this:
         
-        datasets=["BreastCancer", "Diabetes", "Liver", "Parkinsons", "Vertebral", "Seed"]
+        datasets=["BreastCancer", "iris", "Seed"]
 
 
 Change NumOfRuns, PopulationSize, and Iterations variables as you want:
@@ -97,6 +83,8 @@ Now your experiment is ready to go. Enjoy!
 The results will be automaticly generated in excel file called Experiment which is concatnated with the date and time of the experiment.
 The results file contains the following measures:
 
+
+    Optimizer	Dataset	objfname	Experiment	startTime	EndTime	ExecutionTime	trainAcc	testAcc
     Optimizer: The name of the used optimizer
     Dataset: The name of the dataset.
     objfname: The objective function/ Fitness function
@@ -105,37 +93,37 @@ The results file contains the following measures:
     EndTime: Experiment's ending time
     ExecutionTime : Experiment's executionTime (in seconds)
     trainAcc: Trainig Accuracy
-    trainTP: Training True Positive
-    trainFN: Training False Negative
-    trainFP: Training False Positive
-    trainTN: Training True Negative
     testAcc: Trainig Accuracy
-    testTP: Training True Positive
-    testFN: Training False Negative
-    testFP: Training False Positive
-    testTN: Training True Negative
     Iter1	Iter2 Iter3... : Convergence values (The bjective function values after every iteration).	
+    Iter1	Iter2 Iter3... : Convergence values (The number of features after every iteration).	
+    
 
 ##Contribute
-- Issue Tracker: https://github.com/7ossam81/EvoloPy-NN/issues  
-- Source Code: https://github.com/7ossam81/EvoloPy-NN
+- Issue Tracker: https://github.com/aljarrahcs/EvoloPy-FS/issues  
+- Source Code: https://github.com/aljarrahcs/EvoloPy-FS
 
 ##Support
 
-Use the [issue tracker](https://github.com/7ossam81/EvoloPy-NN/issues). 
+Use the [issue tracker](https://github.com/aljarrahcs/EvoloPy-FS/issues). 
 
 ##Citation Request:
 
 Please include these citations if you plan to use this Framework:
 
+- Ruba Abu Khurma, Ibrahim Aljarah, Ahmad Sharieh, and Seyedali Mirjalili. Evolopy-fs: An
+open-source nature-inspired optimization framework in python for feature selection. In Evolutionary
+Machine Learning Techniques, pages 131–173. Springer, 2020
+
 - Hossam Faris, Ibrahim Aljarah, Sayedali Mirjalili, Pedro Castillo, and J.J Merelo. "EvoloPy: An Open-source Nature-inspired Optimization Framework in Python". In Proceedings of the 8th International Joint Conference on Computational Intelligence - Volume 3: ECTA,ISBN 978-989-758-201-1, pages 171-177.
 
-- Hossam Faris, Ibrahim Aljarah, Nailah Al-Madi, and Seyedali Mirjalili. "Optimizing the Learning Process of Feedforward Neural Networks Using Lightning Search Algorithm." International Journal on Artificial Intelligence Tools 25, no. 06 (2016).
+- Hossam Faris, Ali Asghar Heidari, Al-Zoubi Ala’M, Majdi Mafarja, Ibrahim Aljarah, Mohammed
+Eshtay, and Seyedali Mirjalili. Time-varying hierarchical chains of salps with random weight networks
+for feature selection. Expert Systems with Applications, page 112898, 2019.
 
-- Ibrahim Aljarah, Hossam Faris, Seyedali Mirjalili, Nailah Al-Madi, "Training radial basis function networks using biogeography-based optimizer", Neural Computing and Applications, Springer, August 2016.
+- Majdi Mafarja,Ibrahim Aljarah, Ali Asghar Heidari, Hossam Faris, Philippe Fournier-Viger,Xiaodong Li, and Seyedali Mirjalili.  Binary dragonfly optimization for feature selection using time-varying transfer functions. Knowledge-Based Systems, 161:185–204, 2018.
 
-- Hossam Faris, Ibrahim Aljarah and Seyedali Mirjalili, "Training feedforward neural networks using multi-verse optimizer for binary classification problems", Applied Intelligence, Springer, March 2016.
+- Ibrahim Aljarah, Majdi Mafarja, Ali Asghar Heidari, Hossam Faris, Yong Zhang, and Seyedali Mirjalili. Asynchronous accelerating multi-leader salp chains for feature selection. Applied Soft Computing, 71:964–979, 2018.
 
-- Ibrahim Aljarah, Hossam Faris and Seyedali Mirjalili, “Optimizing connection weights in neural networks using the whale optimization algorithm", Soft Computing, Springer, November 2016
+- Hossam Faris, Majdi M Mafarja, Ali Asghar Heidari,Ibrahim Aljarah, Al-Zoubi Ala’M, Seyedali Mirjalili, and  Hamido Fujita.   An  efficient binary salp swarm algorithm  with crossover  scheme for feature selection problems. Knowledge-Based Systems, 154:43–67, 2018.
 
 
