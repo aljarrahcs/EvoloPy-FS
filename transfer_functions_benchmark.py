@@ -13,7 +13,7 @@ import matplotlib.pylab as plt
 
 #________________________V-shaped transfer functions______________________
 def v1(x):
-   v1=abs(erf((pi/2)*x))
+   v1=abs(erf((np.sqrt(pi)/2)*x))
    return v1
 
   
